@@ -24,7 +24,6 @@
         "eventType",
         "eventName",
         "createdAt",
-        "listingId",
         "status",
         "processTimeStart",
         "processTimeEnd",
@@ -58,7 +57,7 @@
           "title": "The Eventtype Schema",
           "default": "",
           "examples": [
-            "rentingEvent"
+            "marketplaceEvent"
           ],
           "pattern": "^(.*)$",
           "minLength": 1
@@ -69,7 +68,7 @@
           "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "rentingEvent"
+            "marketplaceEvent"
           ],
           "pattern": "^(.*)$",
           "minLength": 1
@@ -113,18 +112,8 @@
             "success",
             "failed_not_enough_balance",
             "failed_not_get_claim_key",
-            "failed_rented"          
+            "other_failed"      
           ]
-        },
-        "listingId": {
-          "$id": "#/properties/event/properties/orderId",
-          "type": "integer",
-          "title": "The Orderid Schema",
-          "default": "",
-          "examples": [
-            111
-          ],
-          "pattern": "^(.*)$"
         },
         "note": {
           "$id": "#/properties/note",

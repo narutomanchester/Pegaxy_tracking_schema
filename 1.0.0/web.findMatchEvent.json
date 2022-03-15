@@ -24,8 +24,12 @@
         "eventName",
         "createdAt",
         "eventType",
-        "pegaId"
-
+        "pegaId",
+        "processTimeStart",
+        "processTimeEnd",
+        "status",
+        "raceId",
+        "roomId"
       ],
       "properties": {
         "pegaId": {
@@ -35,6 +39,57 @@
           "default": 0,
           "examples": [
             111
+          ]
+        },
+        "raceId": {
+          "$id": "#/properties/raceId",
+          "type": "integer",
+          "title": "The raceId Schema",
+          "default": 0,
+          "examples": [
+            111
+          ]
+        },
+        "roomId": {
+          "$id": "#/properties/event/properties/roomId",
+          "type": "string",
+          "title": "The roomId Schema",
+          "default": "",
+          "examples": [
+            "GqSeIQwhK"
+          ],
+          "pattern": "^(.*)$",
+          "minLength": 1
+        },
+        "status": {
+          "$id": "#/properties/event/properties/status",
+          "type": "string",
+          "title": "The status Schema",
+          "default": 0,
+          "examples": [
+            1559549791
+          ],
+          "enum": [
+            "success",
+            "failed"          
+          ]
+        },
+        "processTimeStart": {
+          "$id": "#/properties/event/properties/processTimeStart",
+          "type": "integer",
+          "title": "The Createdat Schema",
+          "default": 0,
+          "examples": [
+            30
+          ]
+        },
+        "processTimeEnd": {
+          "$id": "#/properties/event/properties/processTimeEnd",
+          "type": "integer",
+          "title": "The Createdat Schema",
+          "default": 0,
+          "examples": [
+            30
           ]
         },
         "eventId": {

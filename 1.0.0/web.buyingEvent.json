@@ -26,7 +26,8 @@
         "createdAt",
         "listingId",
         "status",
-        "processTime",
+        "processTimeStart",
+        "processTimeEnd",
         "href"
       ],
       "properties": {
@@ -82,8 +83,17 @@
             1559549791
           ]
         },
-        "processTime": {
-          "$id": "#/properties/event/properties/processTime",
+        "processTimeStart": {
+          "$id": "#/properties/event/properties/processTimeStart",
+          "type": "integer",
+          "title": "The Createdat Schema",
+          "default": 0,
+          "examples": [
+            30
+          ]
+        },
+        "processTimeEnd": {
+          "$id": "#/properties/event/properties/processTimeEnd",
           "type": "integer",
           "title": "The Createdat Schema",
           "default": 0,

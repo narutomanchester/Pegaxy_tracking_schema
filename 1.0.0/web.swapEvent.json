@@ -24,7 +24,11 @@
         "eventType",
         "eventName",
         "createdAt",
-        "listingId",
+        "token1",
+        "token2",
+        "amountToken1",
+        "amountToken2",
+        "priceRate",
         "status",
         "processTimeStart",
         "processTimeEnd",
@@ -40,6 +44,55 @@
             "123"
           ],
           "pattern": "^(.*)$"
+        },
+        "token1": {
+          "$id": "#/properties/event/properties/token1",
+          "type": "string",
+          "title": "The token1 Schema",
+          "default": "",
+          "examples": [
+            "USDC"
+          ],
+          "pattern": "^(.*)$",
+          "minLength": 1
+        },
+        "token2": {
+          "$id": "#/properties/event/properties/token2",
+          "type": "string",
+          "title": "The token2 Schema",
+          "default": "",
+          "examples": [
+            "USDC"
+          ],
+          "pattern": "^(.*)$",
+          "minLength": 1
+        },
+        "amountToken1": {
+          "$id": "#/properties/event/properties/amountToken1",
+          "type": "number",
+          "title": "The amountToken1 Schema",
+          "default": 0,
+          "examples": [
+            1111
+          ]
+        },
+        "amountToken2": {
+          "$id": "#/properties/event/properties/amountToken2",
+          "type": "number",
+          "title": "The amountToken2 Schema",
+          "default": 0,
+          "examples": [
+            1111
+          ]
+        },
+        "priceRate": {
+          "$id": "#/properties/event/properties/priceRate",
+          "type": "number",
+          "title": "The priceRate Schema ( Ex 1 token1 = priceRate token2) ",
+          "default": 0,
+          "examples": [
+            1111
+          ]
         },
         "eventId": {
           "$id": "#/properties/event/properties/id",
@@ -58,7 +111,7 @@
           "title": "The Eventtype Schema",
           "default": "",
           "examples": [
-            "rentingEvent"
+            "marketplaceEvent"
           ],
           "pattern": "^(.*)$",
           "minLength": 1
@@ -69,7 +122,7 @@
           "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "rentingEvent"
+            "marketplaceEvent"
           ],
           "pattern": "^(.*)$",
           "minLength": 1
@@ -113,19 +166,10 @@
             "success",
             "failed_not_enough_balance",
             "failed_not_get_claim_key",
-            "failed_rented"          
+            "other_failed"          
           ]
         },
-        "listingId": {
-          "$id": "#/properties/event/properties/orderId",
-          "type": "integer",
-          "title": "The Orderid Schema",
-          "default": "",
-          "examples": [
-            111
-          ],
-          "pattern": "^(.*)$"
-        },
+        
         "note": {
           "$id": "#/properties/note",
           "type": "string",

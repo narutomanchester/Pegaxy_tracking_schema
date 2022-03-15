@@ -121,6 +121,16 @@
           "pattern": "^(.*)$",
           "minLength": 1
         },
+        "extraJson": {
+          "$id": "#/properties/extraJson",
+          "type": "string",
+          "title": "The extra information for event",
+          "default": "",
+          "examples": [
+            "{'a':123}"
+          ],
+          "pattern": "^(.*)$"
+        },
         "note": {
           "$id": "#/properties/note",
           "type": "string",
