@@ -1,0 +1,318 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "additionalProperties": false,
+  "title": "The Root Schema",
+  "required": [
+    "event",
+    "session",
+    "visitor",
+    "schemaName",
+    "time_unix",
+    "schemaVer"
+  ],
+  "properties": {
+    "event": {
+      "$id": "#/properties/event",
+      "type": "object",
+      "additionalProperties": false,
+      "title": "The Event Schema",
+      "required": [
+        "eventId",
+        "eventType",
+        "eventName",
+        "createdAt",
+        "listingId",
+        "status",
+        "processTime",
+        "href"
+      ],
+      "properties": {
+        "href": {
+          "$id": "#/properties/href",
+          "type": "string",
+          "title": "The Orderid Schema",
+          "default": "",
+          "examples": [
+            "123"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "eventId": {
+          "$id": "#/properties/event/properties/id",
+          "type": "string",
+          "title": "The Id Schema",
+          "default": "",
+          "examples": [
+            "f6d15d7d-b68f-41b1-8e4f-4bd622de37c0"
+          ],
+          "pattern": "^(.*)$",
+          "minLength": 1
+        },
+        "eventType": {
+          "$id": "#/properties/event/properties/eventType",
+          "type": "string",
+          "title": "The Eventtype Schema",
+          "default": "",
+          "examples": [
+            "marketplaceEvent"
+          ],
+          "pattern": "^(.*)$",
+          "minLength": 1
+        },
+        "eventName": {
+          "$id": "#/properties/event/properties/eventName",
+          "type": "string",
+          "title": "The Eventname Schema",
+          "default": "",
+          "examples": [
+            "marketplaceEvent"
+          ],
+          "pattern": "^(.*)$",
+          "minLength": 1
+        },
+        "createdAt": {
+          "$id": "#/properties/event/properties/createdAt",
+          "type": "integer",
+          "title": "The Createdat Schema",
+          "default": 0,
+          "examples": [
+            1559549791
+          ]
+        },
+        "processTime": {
+          "$id": "#/properties/event/properties/processTime",
+          "type": "integer",
+          "title": "The Createdat Schema",
+          "default": 0,
+          "examples": [
+            30
+          ]
+        },
+        "status": {
+          "$id": "#/properties/event/properties/status",
+          "type": "string",
+          "title": "The status Schema",
+          "default": 0,
+          "examples": [
+            1559549791
+          ],
+          "enum": [
+            "success",
+            "failed_not_enough_balance",
+            "failed_not_get_claim_key",
+            "failed_rented"          
+          ]
+        },
+        "listingId": {
+          "$id": "#/properties/event/properties/orderId",
+          "type": "integer",
+          "title": "The Orderid Schema",
+          "default": "",
+          "examples": [
+            111
+          ],
+          "pattern": "^(.*)$"
+        },
+        "note": {
+          "$id": "#/properties/note",
+          "type": "string",
+          "title": "The note Schema",
+          "default": "",
+          "examples": [
+            "note schema"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "session": {
+      "$id": "#/properties/session",
+      "type": "object",
+      "additionalProperties": false,
+      "title": "The Session Schema",
+      "required": [
+        "clientCookies",
+        "ds",
+        "platform",
+        "ref",
+        "res",
+        "vp"
+      ],
+      "properties": {
+        "charset": {
+          "$id": "#/properties/session/properties/charset",
+          "type": "string",
+          "title": "The Charset Schema",
+          "default": "",
+          "examples": [
+            "UTF-8"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "clientCookies": {
+          "$id": "#/properties/clientCookies",
+          "type": "string",
+          "title": "The clientCookies",
+          "default": "",
+          "examples": [
+            "abc=123;"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "ds": {
+          "$id": "#/properties/session/properties/ds",
+          "type": "string",
+          "title": "The Ds Schema",
+          "default": "",
+          "examples": [
+            "1495x1035"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "language": {
+          "$id": "#/properties/session/properties/language",
+          "type": "string",
+          "title": "The Language Schema",
+          "default": "",
+          "examples": [
+            "vi-VN"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "offset": {
+          "$id": "#/properties/session/properties/offset",
+          "type": "string",
+          "title": "The Offset Schema",
+          "default": "",
+          "examples": [
+            "+07:00"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "platform": {
+          "$id": "#/properties/session/properties/platform",
+          "type": "string",
+          "title": "The Platform Schema",
+          "default": "",
+          "examples": [
+            "Linux x86_64"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "ref": {
+          "$id": "#/properties/session/properties/ref",
+          "type": "string",
+          "title": "The Ref Schema",
+          "default": "",
+          "examples": [
+            "http://localhost:35315/"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "res": {
+          "$id": "#/properties/session/properties/res",
+          "type": "string",
+          "title": "The Res Schema",
+          "default": "",
+          "examples": [
+            "1920x1080"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "title": {
+          "$id": "#/properties/session/properties/title",
+          "type": "string",
+          "title": "The Title Schema",
+          "default": "",
+          "examples": [
+            "Interactor Example"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "tz": {
+          "$id": "#/properties/session/properties/tz",
+          "type": "string",
+          "title": "The Tz Schema",
+          "default": "",
+          "examples": [
+            "Asia/Saigon"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "vp": {
+          "$id": "#/properties/session/properties/vp",
+          "type": "string",
+          "title": "The Vp Schema",
+          "default": "",
+          "examples": [
+            "1495x759"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "visitor": {
+      "$id": "#/properties/visitor",
+      "type": "object",
+      "additionalProperties": false,
+      "title": "The Visitor Schema",
+      "required": [
+        "trackingId"
+      ],
+      "properties": {
+        "clientAddress": {
+          "$id": "#/properties/visitor/properties/clientAddress",
+          "type": "string",
+          "title": "The User Address (If they connect wallet)",
+          "default": "",
+          "examples": [
+            "96e4f76f5703abd1d64ba468dd019d69"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "trackingId": {
+          "$id": "#/properties/visitor/properties/trackingId",
+          "type": "string",
+          "title": "The Trackingid Schema (fingerprint)",
+          "default": "",
+          "examples": [
+            "c94992d2-9fd4-49f0-90a0-9448122832cf"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "schemaName": {
+      "$id": "#/properties/schemaName",
+      "type": "string",
+      "title": "The Schemaname Schema",
+      "default": "",
+      "examples": [
+        "error-event"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "time_unix": {
+      "$id": "#/properties/time_unix",
+      "type": "integer",
+      "title": "The time_unix Schema",
+      "default": 0,
+      "examples": [
+        1557744762
+      ]
+    },
+    "schemaVer": {
+      "$id": "#/properties/appVer",
+      "type": "string",
+      "title": "The Schemaname Schema",
+      "default": "",
+      "examples": [
+        "1.0"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}
